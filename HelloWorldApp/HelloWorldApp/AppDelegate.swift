@@ -12,10 +12,27 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let fileManager = FileManager.default
+        let documentsURL =  fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        let MyFilesPath = documentsURL.appendingPathComponent("MyFilesPath_001")
+        do
+        {
+            try FileManager.default.createDirectory(atPath: MyFilesPath.path, withIntermediateDirectories: true, attributes: nil)
+        }
+        catch let error as NSError
+        {
+            NSLog("Unable to create directory \(error.debugDescription)")
+        }
+        
+        
         return true
     }
 

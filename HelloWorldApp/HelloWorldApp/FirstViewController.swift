@@ -9,12 +9,11 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view?.isUserInteractionEnabled = true
         // Do any additional setup after loading the view.
     }
-
-
 }
 

@@ -15,6 +15,9 @@
 		7E16FCC822528D2000D91423 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E16FCC622528D2000D91423 /* LaunchScreen.storyboard */; };
 		7E16FCD322528D2000D91423 /* HelloWorldAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16FCD222528D2000D91423 /* HelloWorldAppTests.swift */; };
 		7E16FCDE22528D2000D91423 /* HelloWorldAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16FCDD22528D2000D91423 /* HelloWorldAppUITests.swift */; };
+		7E208B3D225BE77500491810 /* RowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E208B3C225BE77500491810 /* RowModel.swift */; };
+		7E208B3F225C396E00491810 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E208B3E225C396E00491810 /* TableViewCell.swift */; };
+		7E7B0B81225BB2A3008725B1 /* ReportProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B0B80225BB2A3008725B1 /* ReportProblemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		7E16FCD922528D2000D91423 /* HelloWorldAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E16FCDD22528D2000D91423 /* HelloWorldAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldAppUITests.swift; sourceTree = "<group>"; };
 		7E16FCDF22528D2000D91423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E208B3C225BE77500491810 /* RowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowModel.swift; sourceTree = "<group>"; };
+		7E208B3E225C396E00491810 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		7E7B0B80225BB2A3008725B1 /* ReportProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportProblemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				7E16FCC422528D2000D91423 /* Assets.xcassets */,
 				7E16FCC622528D2000D91423 /* LaunchScreen.storyboard */,
 				7E16FCC922528D2000D91423 /* Info.plist */,
+				7E7B0B80225BB2A3008725B1 /* ReportProblemViewController.swift */,
+				7E208B3C225BE77500491810 /* RowModel.swift */,
+				7E208B3E225C396E00491810 /* TableViewCell.swift */,
 			);
 			path = HelloWorldApp;
 			sourceTree = "<group>";
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E7B0B81225BB2A3008725B1 /* ReportProblemViewController.swift in Sources */,
 				7E16FCC022528D1E00D91423 /* SecondViewController.swift in Sources */,
+				7E208B3D225BE77500491810 /* RowModel.swift in Sources */,
 				7E16FCBC22528D1E00D91423 /* AppDelegate.swift in Sources */,
+				7E208B3F225C396E00491810 /* TableViewCell.swift in Sources */,
 				7E16FCBE22528D1E00D91423 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
