@@ -15,9 +15,21 @@
 		7E16FCC822528D2000D91423 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E16FCC622528D2000D91423 /* LaunchScreen.storyboard */; };
 		7E16FCD322528D2000D91423 /* HelloWorldAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16FCD222528D2000D91423 /* HelloWorldAppTests.swift */; };
 		7E16FCDE22528D2000D91423 /* HelloWorldAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16FCDD22528D2000D91423 /* HelloWorldAppUITests.swift */; };
+		7E1A9F0F22822E3E00770192 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A9F0E22822E3E00770192 /* StatisticViewController.swift */; };
+		7E1A9F1122822EE500770192 /* StatisticDrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A9F1022822EE500770192 /* StatisticDrawingCanvasView.swift */; };
 		7E208B3D225BE77500491810 /* RowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E208B3C225BE77500491810 /* RowModel.swift */; };
 		7E208B3F225C396E00491810 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E208B3E225C396E00491810 /* TableViewCell.swift */; };
+		7E70052D227F0FDC008AC99C /* AZSClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E70052C227F0FDB008AC99C /* AZSClient.framework */; };
+		7E70052F227F105E008AC99C /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E70052E227F105E008AC99C /* libxml2.2.tbd */; };
+		7E700531227F2AFE008AC99C /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E700530227F2AFE008AC99C /* Config.plist */; };
+		7E700535227F373A008AC99C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E700534227F373A008AC99C /* NetworkService.swift */; };
+		7E738BA322820B50001C221B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E738BA022820B4C001C221B /* FBSDKLoginKit.framework */; };
+		7E738BA422820B50001C221B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E738BA122820B4F001C221B /* FBSDKCoreKit.framework */; };
+		7E738BA522820B50001C221B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E738BA222820B4F001C221B /* Bolts.framework */; };
 		7E7B0B81225BB2A3008725B1 /* ReportProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B0B80225BB2A3008725B1 /* ReportProblemViewController.swift */; };
+		7EF34915227EEAE400DAC935 /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF34914227EEAE300DAC935 /* MicrosoftAzureMobile.framework */; };
+		7EF34918227EF1A600DAC935 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF34917227EF1A600DAC935 /* SafariServices.framework */; };
+		7EF3491A227EF20600DAC935 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF34919227EF20600DAC935 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +64,22 @@
 		7E16FCD922528D2000D91423 /* HelloWorldAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E16FCDD22528D2000D91423 /* HelloWorldAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldAppUITests.swift; sourceTree = "<group>"; };
 		7E16FCDF22528D2000D91423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E1A9F0E22822E3E00770192 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		7E1A9F1022822EE500770192 /* StatisticDrawingCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticDrawingCanvasView.swift; sourceTree = "<group>"; };
 		7E208B3C225BE77500491810 /* RowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowModel.swift; sourceTree = "<group>"; };
 		7E208B3E225C396E00491810 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		7E70052C227F0FDB008AC99C /* AZSClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AZSClient.framework; sourceTree = "<group>"; };
+		7E70052E227F105E008AC99C /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		7E700530227F2AFE008AC99C /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		7E700534227F373A008AC99C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		7E738BA022820B4C001C221B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		7E738BA122820B4F001C221B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		7E738BA222820B4F001C221B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7E7B0B80225BB2A3008725B1 /* ReportProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportProblemViewController.swift; sourceTree = "<group>"; };
+		7EF34914227EEAE300DAC935 /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
+		7EF34916227EED9600DAC935 /* HelloWorldApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloWorldApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		7EF34917227EF1A600DAC935 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		7EF34919227EF20600DAC935 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +87,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E70052F227F105E008AC99C /* libxml2.2.tbd in Frameworks */,
+				7E70052D227F0FDC008AC99C /* AZSClient.framework in Frameworks */,
+				7E738BA322820B50001C221B /* FBSDKLoginKit.framework in Frameworks */,
+				7EF3491A227EF20600DAC935 /* WebKit.framework in Frameworks */,
+				7E738BA422820B50001C221B /* FBSDKCoreKit.framework in Frameworks */,
+				7EF34918227EF1A600DAC935 /* SafariServices.framework in Frameworks */,
+				7EF34915227EEAE400DAC935 /* MicrosoftAzureMobile.framework in Frameworks */,
+				7E738BA522820B50001C221B /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +122,7 @@
 				7E16FCD122528D2000D91423 /* HelloWorldAppTests */,
 				7E16FCDC22528D2000D91423 /* HelloWorldAppUITests */,
 				7E16FCB922528D1E00D91423 /* Products */,
+				7EF34911227EEAA100DAC935 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +149,11 @@
 				7E7B0B80225BB2A3008725B1 /* ReportProblemViewController.swift */,
 				7E208B3C225BE77500491810 /* RowModel.swift */,
 				7E208B3E225C396E00491810 /* TableViewCell.swift */,
+				7EF34916227EED9600DAC935 /* HelloWorldApp-Bridging-Header.h */,
+				7E700530227F2AFE008AC99C /* Config.plist */,
+				7E700534227F373A008AC99C /* NetworkService.swift */,
+				7E1A9F0E22822E3E00770192 /* StatisticViewController.swift */,
+				7E1A9F1022822EE500770192 /* StatisticDrawingCanvasView.swift */,
 			);
 			path = HelloWorldApp;
 			sourceTree = "<group>";
@@ -135,6 +174,21 @@
 				7E16FCDF22528D2000D91423 /* Info.plist */,
 			);
 			path = HelloWorldAppUITests;
+			sourceTree = "<group>";
+		};
+		7EF34911227EEAA100DAC935 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E738BA222820B4F001C221B /* Bolts.framework */,
+				7E738BA122820B4F001C221B /* FBSDKCoreKit.framework */,
+				7E738BA022820B4C001C221B /* FBSDKLoginKit.framework */,
+				7E70052E227F105E008AC99C /* libxml2.2.tbd */,
+				7E70052C227F0FDB008AC99C /* AZSClient.framework */,
+				7EF34919227EF20600DAC935 /* WebKit.framework */,
+				7EF34917227EF1A600DAC935 /* SafariServices.framework */,
+				7EF34914227EEAE300DAC935 /* MicrosoftAzureMobile.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E700531227F2AFE008AC99C /* Config.plist in Resources */,
 				7E16FCC822528D2000D91423 /* LaunchScreen.storyboard in Resources */,
 				7E16FCC522528D2000D91423 /* Assets.xcassets in Resources */,
 				7E16FCC322528D1E00D91423 /* Main.storyboard in Resources */,
@@ -273,7 +328,10 @@
 				7E208B3D225BE77500491810 /* RowModel.swift in Sources */,
 				7E16FCBC22528D1E00D91423 /* AppDelegate.swift in Sources */,
 				7E208B3F225C396E00491810 /* TableViewCell.swift in Sources */,
+				7E1A9F1122822EE500770192 /* StatisticDrawingCanvasView.swift in Sources */,
 				7E16FCBE22528D1E00D91423 /* FirstViewController.swift in Sources */,
+				7E700535227F373A008AC99C /* NetworkService.swift in Sources */,
+				7E1A9F0F22822E3E00770192 /* StatisticViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +421,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -385,6 +444,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorldApp/HelloWorldApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -424,6 +484,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -439,6 +500,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorldApp/HelloWorldApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -450,16 +512,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6669X7274X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HelloWorldApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dlavoryk.HelloWorldApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorldApp/HelloWorldApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -468,17 +537,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6669X7274X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HelloWorldApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dlavoryk.HelloWorldApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorldApp/HelloWorldApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
