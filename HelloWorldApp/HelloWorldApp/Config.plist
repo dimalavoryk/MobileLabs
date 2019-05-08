@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Config.plist
+   HelloWorldApp
+
+   Created by Dmytro Lavoryk on 5/5/19.
+   Copyright (c) 2019 dlavoryk. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        
+        <key>ConnectionKey_1</key>
+        <string>S9f/wua+UPTnE0CRFA/N81uYRv/eASmr00laVlyLRX+JKtBdxg09AnOHqwMVsseGLGTcKYv4ZWI3l+Xw2BO7Ow==</string>
+        <key>ConnectionString_1</key>
+        <string>DefaultEndpointsProtocol=https;AccountName=hellomobileworldstorage;AccountKey=S9f/wua+UPTnE0CRFA/N81uYRv/eASmr00laVlyLRX+JKtBdxg09AnOHqwMVsseGLGTcKYv4ZWI3l+Xw2BO7Ow==;EndpointSuffix=core.windows.net</string>
+        <key>StorageAccountName</key>
+        <string>hellomobileworldstorage</string>
+        
+        <key>DataFolder</key>
+        <string>MyFilesPath_001</string>
+        
+        <key>AppURLString</key>
+        <string>https://hellomobileworld.azurewebsites.net</string>
+        
+        <key>DataTableName</key>
+        <string>IssuesTable</string>
+        
+        
+        
+        <key>ProblemsCategory</key>
+        <array>
+            <string>Неприбране сміття</string>
+            <string>Занедбаний майданчик</string>
+            <string>Яма на дорозі</string>
+            <string>Відкритий люк</string>
+            <string>Комунальні проблеми</string>
+            <string>Неприбраний сніг</string>
+        </array>
+        
+    </dict>
+</plist>

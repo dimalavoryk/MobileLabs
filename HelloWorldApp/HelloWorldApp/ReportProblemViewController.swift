@@ -33,7 +33,9 @@ class ReportProblemViewController: UIViewController, UIPickerViewDataSource, UIP
         view.isUserInteractionEnabled = true
         self.mProblemPicker.delegate = self
         self.mProblemPicker.dataSource = self
-        pickerData = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
+     
+        let CurApp = UIApplication.shared.delegate as! AppDelegate
+        pickerData = CurApp.ProblmesCategory
         
         // Do any additional setup after loading the view.
     }
@@ -53,9 +55,19 @@ class ReportProblemViewController: UIViewController, UIPickerViewDataSource, UIP
         return pickerData.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
-        return pickerData[row]
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont(name: "System", size: 20)
+            pickerLabel?.textAlignment = .center
+        }
+        pickerLabel?.text = pickerData[row]
+        pickerLabel?.textColor = UIColor.black
+        
+        return pickerLabel!
     }
+    
     
     func selectImageFrom(_ source: ImageSource){
         imagePicker =  UIImagePickerController()
@@ -96,8 +108,9 @@ class ReportProblemViewController: UIViewController, UIPickerViewDataSource, UIP
     
     
     @IBAction func OnSwiped(_ sender: UISwipeGestureRecognizer) {
+    
         
-        let currentDateTime = Date()
+/*        let currentDateTime = Date()
         // initialize the date formatter and set the style
         let formatter = DateFormatter()
         formatter.timeStyle = .medium
@@ -107,7 +120,7 @@ class ReportProblemViewController: UIViewController, UIPickerViewDataSource, UIP
        
         let selectedDescription = pickerData[mProblemPicker.selectedRow(inComponent: 0)]
         let comment = mCommentSection.text
-        let jsonArray = [selectedDescription, comment, fileName]// + ".png"]
+        let jsonArray = [selectedDescription, comment, fileName]
 
         
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -115,7 +128,10 @@ class ReportProblemViewController: UIViewController, UIPickerViewDataSource, UIP
         let pathDirectory = documentsDirectory
         
         try? FileManager().createDirectory(at: pathDirectory, withIntermediateDirectories: true)
-        let fileDirectory = pathDirectory.appendingPathComponent("MyFilesPath_001")
+
+        /// Use path from AppDelegate
+        let CurApp = UIApplication.shared.delegate as! AppDelegate
+        let fileDirectory = pathDirectory.appendingPathComponent(CurApp.DataFolder)
         
         let filePath = fileDirectory.appendingPathComponent(fileName)
         
@@ -128,6 +144,16 @@ class ReportProblemViewController: UIViewController, UIPickerViewDataSource, UIP
         }
         
         mPreviewImg.image?.saveToDocuments(filename: fileName)
+*/
+        /// Use path from AppDelegate
+        let CurApp = UIApplication.shared.delegate as! AppDelegate
+        CurApp.SharedNetworkService.UploadIssue(Category: pickerData[mProblemPicker.selectedRow(inComponent: 0)], Comment: mCommentSection.text ?? "DefaultComment", ImageToSave: mPreviewImg.image!, ImageName: "TestName", SuccessCallback: { (Category : String, Comment : String, Img : UIImage, ImgName : String, ID : String) in
+            print("Successfully saved")
+        }) { (Category : String, Comment : String, ImgName : String) in
+            print("Failed to upload")
+        }
+        
+        performSegue(withIdentifier: "GoToStart", sender: nil)
     }
 }
 
@@ -148,7 +174,7 @@ extension UIImage {
     func saveToDocuments(filename:String) {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let fileURL = documentsDirectory.appendingPathComponent(filename)
-        if let data = self.pngData(){//}(compressionQuality: 1.0) {
+        if let data = self.pngData(){
             do {
                 try data.write(to: fileURL)
             } catch {

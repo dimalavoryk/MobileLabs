@@ -13,8 +13,6 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var mTable: UITableView!
     
-    @IBOutlet weak var MyImage: UIImageView!
-    
     var data: [RowModel] = []
     
     
@@ -23,18 +21,14 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     
-/*        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-  */
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell  else {
+       guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell  else {
             fatalError("The dequeued cell is not an instance of TableViewCell.")
         }
         let problem = data[indexPath.row]
         cell.DescriptionLabel.text = problem.description
         cell.CommentLable.text = problem.comment
         cell.Img.image = problem.img
-        //cell.textLabel?.text = data[indexPath.row].description
-        
+
         return cell
     }
     
@@ -44,8 +38,18 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         // Do any additional setup after loading the view.
         self.mTable.delegate = self
         self.mTable.dataSource = self
-        
-        let fm = FileManager.default
+        let CurApp = UIApplication.shared.delegate as! AppDelegate
+        CurApp.SharedNetworkService.LoadAllData(ElementLoadedCallback: { (Category : String, Comment : String, Image : UIImage, ImageName : String) in
+            let Row = RowModel(img: Image, comment: Comment, description: Category)
+            
+            self.data.append(Row)
+            DispatchQueue.main.async { // Correct
+                self.mTable.reloadData()
+            }
+        }) {
+            print ("Error loading data")
+        }
+/*        let fm = FileManager.default
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         
         let pathDirectory = documentsDirectory
@@ -68,8 +72,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
                 let ObjPath = path.appendingPathComponent(item)
                 let data =
                     try Data(contentsOf: URL(fileURLWithPath: ObjPath.path), options: .mappedIfSafe)
-            //    let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-
+                
                guard let personArray = try JSONSerialization.jsonObject(with: data, options: []) as? [String] else { return }
                 
                 var LoadedImg = UIImage()
@@ -82,7 +85,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         } catch {
             // failed to read directory – bad permissions, perhaps?
             
-        }
+        }*/
     }
 
 
@@ -104,7 +107,6 @@ extension UIImage {
         
         // image has not been created yet: create it, store it, return it
         let newImage: UIImage = UIImage()// create your UIImage here
-       //     try? UIImagePNGRepresentation()?.write(to: imageUrl)
         return newImage
     }
 }
